@@ -20,5 +20,5 @@ from dashboard import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/', views.home)
+    path('course/<int:courseid>', views.courseDetails)
 ]
