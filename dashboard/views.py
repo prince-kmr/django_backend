@@ -26,7 +26,13 @@ def dynamic_home(request):
     # This is the dynamic data we want to send to the HTML
     context = {
         'username': 'CoderExtraordinaire',
-        'lucky_numbers': [random.randint(1, 100) for _ in range(3)]
+        'lucky_numbers': [random.randint(1, 100) for _ in range(3)],
+        'clist': ['Java', 'Python', 'Django', 'React'],
+        'student_details': [
+          {'name': 'Prince', 'phone':1234},
+          {'name': 'Shubham', 'phone':89755},
+          {'name': 'Rane', 'phone':45678}
+        ]
     }
     
     # Render takes: request, the path to the template, and the data (context)
