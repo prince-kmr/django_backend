@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My First Dynamic Page</title>
+</head>
+<body>
+    <h1>Hello, {{ username }}!</h1> 
+    <p>Welcome to your first dynamic Django page.</p>
+
+    <h3>Your Lucky Numbers Today:</h3>
+    <ul>
+        {% for number in lucky_numbers %}
+            <li>{{ number }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
