@@ -31,13 +31,19 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'django.contrib.sites',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'cms',
+    'menus',
+    'treebeard',
+    'sekizai',
     'dashboard',
+    'about_us'
 ]
 
 MIDDLEWARE = [
@@ -120,3 +126,7 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
+
+SITE_ID = 1
+
+CMS_CONFIRM_VERSION4 = True

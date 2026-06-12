@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Dynamic Django Form{% endblock %}
+
+{% block content %}
+    <h2>Submit Your Details</h2>
+    
+    <form method="POST" action="">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit Form</button>
+    </form>
+{% endblock %}

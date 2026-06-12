@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}Success{% endblock %}
+
+{% block content %}
+    <h1>Latest Articles</h1>
+    <hr>
+
+    {% if articles %}
+        {% for article in articles %}
+            <div class="article-summary" style="margin-bottom: 20px;">
+                <h2>
+                    <a href="{% url 'article_detail' slug=article.slug %}">{{ article.title }}</a>
+                </h2>
+                <p><small>Published on {{ article.created_at|date:"M d, Y" }} by {{ article.author.username }}</small></p>
+                <p>{{ article.content|truncatewords:30 }}</p>
+                <a href="{% url 'article_detail' slug=article.slug %}">Read More &rarr;</a>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>No articles published yet!</p>
+    {% endif %}
+{% endblock %}

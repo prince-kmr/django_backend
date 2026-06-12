@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block title %}Success{% endblock %}
+
+{% block content %}
+    <h2>Thank You, {{ name }}!</h2>
+    <p>Your form has been successfully submitted and processed using POST.</p>
+    <a href="{% url 'contact_form' %}">Submit another response</a>
+{% endblock %}
