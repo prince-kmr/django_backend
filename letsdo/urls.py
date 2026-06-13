@@ -19,7 +19,7 @@ from django.urls import path, include
 from dashboard import views
 from about_us import views
 from pages import views
-
+from product import views
 
 
 urlpatterns = [
@@ -28,4 +28,5 @@ urlpatterns = [
     path('', include('dashboard.urls')),
     path('form/', include('about_us.urls')),
     path('api/', include('pages.urls')),
+    path('product/', include('product.urls'))
 ]

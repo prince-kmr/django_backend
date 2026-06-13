@@ -49,7 +49,8 @@ INSTALLED_APPS = [
     # Page
     'dashboard',
     'about_us',
-    'pages'
+    'pages',
+    'product'
 ]
 
 MIDDLEWARE = [
