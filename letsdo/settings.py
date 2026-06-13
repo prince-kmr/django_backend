@@ -157,3 +157,11 @@ CORS_ALLOWED_ORIGINS = [
 SITE_ID = 1
 
 CMS_CONFIRM_VERSION4 = True
+
+# Rest Framework Settings
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    ]
+}
