@@ -38,15 +38,22 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # Added for CMS
     'cms',
     'menus',
     'treebeard',
     'sekizai',
+    # Added for use as backend
+    'corsheaders',
+    'rest_framework',
+    # Page
     'dashboard',
-    'about_us'
+    'about_us',
+    'pages'
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -125,6 +132,12 @@ STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [
     BASE_DIR / "static",
+]
+
+# Allow React (running on port 5173 or 3000) to make requests to Django
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:5173", 
+    "http://localhost:3000",
 ]
 
 SITE_ID = 1

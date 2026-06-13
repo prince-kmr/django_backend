@@ -18,6 +18,8 @@ from django.contrib import admin
 from django.urls import path, include
 from dashboard import views
 from about_us import views
+from pages import views
+
 
 
 urlpatterns = [
@@ -25,4 +27,5 @@ urlpatterns = [
     # path('course/<int:courseid>', views.courseDetails)
     path('', include('dashboard.urls')),
     path('form/', include('about_us.urls')),
+    path('api/', include('pages.urls')),
 ]
