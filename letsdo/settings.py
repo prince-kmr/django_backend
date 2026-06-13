@@ -46,11 +46,13 @@ INSTALLED_APPS = [
     # Added for use as backend
     'corsheaders',
     'rest_framework',
+    'rest_framework.authtoken',
     # Page
     'dashboard',
     'about_us',
     'pages',
-    'product'
+    'product',
+    'login'
 ]
 
 MIDDLEWARE = [
