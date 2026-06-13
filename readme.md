@@ -10,3 +10,7 @@ pip install django-cms
 
 ## Link with frontend
 pip install django djangorestframework django-cors-headers
+
+
+## Databse configure
+pip install psycopg2-binary
